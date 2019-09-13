@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="utf-8">
+  <title>Responsive Design with CSS</title>
+</head>
 <script 
   src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
 </script>
@@ -124,20 +128,17 @@
           For example, the following media query tests to see if the current 
           web page is being displayed as screen media (therefore not a 
           printed document) and the viewport is at least 800 pixels wide. 
-          The CSS for the 
-          <code>
-            .container
-          </code> 
-            selector will only be applied if these two things are true.
+          The CSS for the <code>.container</code> selector will only be 
+          applied if these two things are true.
         </p>
         <p>
-          <code>
-            @media screen and (min-width: 800px) { <br>
-              .container { <br>
-                margin: 1em 2em; <br>
-              } <br>
+            <pre class="brush: css"><code>
+            @media screen and (min-width: 800px) {
+              .container {
+                margin: 1em 2em;
+              }
             }
-          </code>
+          </code></pre>
         </p>
         <p>
           You can add multiple media queries within a stylesheet, tweaking 
@@ -159,7 +160,86 @@
       </section>
       <section class="main-section">
         <header id="Flexible_Grids">Flexible Grids</header>
+        <p>
+          Responsive sites don't just change their layout between breakpoints, 
+          they are built on flexible grids. A flexible grid means that you 
+          don't need to target every possible device size that there is, and 
+          build a pixel perfect layout for it. That approach would be 
+          impossible given the vast number of differently-sized devices that 
+          exist, and the fact that on desktop at least, people do not always 
+          have their browser window maximized.
+        </p>
+        <p>
+          By using a flexible grid, you only need to add in a breakpoint and 
+          change the design at the point where the content starts to look bad. 
+          For example if the line lengths become unreadably long as the screen 
+          size increases, or a box becomes squashed with two words on each line 
+          as it narrows.
+        </p>
+        <p>
+          In the early days of responsive design our only option for performing 
+          layout was to use <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">
+          floats</a>. Flexible floated layouts were achieved by giving each 
+          element a percentage width, and ensuring that across the layout the 
+          totals were not more than 100%. In his original piece on fluid grids, 
+          Marcotte detailed a formula for taking a layout designed using pixels 
+          and converting it into percentages.
+        </p>
+        <pre><code>target / context = result</code></pre>
         
+        <p>
+          For example if our target column size is 60 pixels, and the context 
+          (or container) it is in is 960 pixels, we divide 60 by 960 to get a 
+          value we can use in our CSS, after moving the decimal point two 
+          places to the right.
+        </p>
+        <pre class="brush: css"><code>.col { 
+          width: 6.25%; /* 60 / 960 = 0.0625 */ 
+        }</code>
+        </pre>
+        <p>
+          This approach will be found in many places across the web today, and 
+          it is documented here in the layout section of our 
+          <a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">
+          Legacy layout methods</a> article. It is likely that you will come 
+          across websites using this approach in your work, so it is worth 
+          understanding it, even though you would not build a modern site 
+          using a float-based flexible grid.
+        </p>
+        <p>
+          The following example demonstrates a simple responsive design using 
+          Media Queries and a flexible grid. On narrow screens the layout 
+          displays the boxes stacked on top of one another:
+        </p>
+        <figure>
+          <img 
+            alt="A mobile view of the layout with boxes stacked on 
+            top of each other vertically." 
+            src="https://mdn.mozillademos.org/files/16836/mdn-rwd-mobile.png" 
+            style="display: block; height: 407px; width: 300px;">
+            <p>
+              On wider screens they move to two columns:
+            </p>
+            <figcaption></figcaption>
+        </figure>
+        <figure>
+          <img 
+            alt="A desktop view of a layout with two columns." 
+            src="https://mdn.mozillademos.org/files/16837/mdn-rwd-desktop.png" 
+            style="display: block; height: 217px; width: 600px;">
+          <figcaption></figcaption>
+        </figure>
+        <div class="blockIndicator note">
+          <p>
+            <strong>Note</strong>: You can find the 
+            <a class="external" 
+              href="https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html" 
+              target="_blank">live example</a> and 
+            <a class="external" 
+              href="https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html" 
+              target="_blank">source code</a> for this example on GitHub.
+          </p>
+        </div>
       </section>
       <section class="main-section">
         <header id="Responsive_Images">Responsive Images</header>
