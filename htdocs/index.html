@@ -3,105 +3,163 @@
 <script 
   src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
 </script>
-  <body>
-    <nav id="navbar">
-      <header>CSS Responsive Design</header>
-      <ul>
-        <li>
-          <a href="#Responsive_Design">
-            Responsive Design
-          </a>
-        </li>
-        <li>
-          <a href="#Media_Queries">
-            Media Queries
-          </a>
-        </li>
-        <li>
-          <a href="#Flexible_Grids">
-            Flexible Grids
-          </a>
-        </li>
-        <li>
-          <a href="#Responsive_Images">
-            Responsive Images
-          </a>
-        </li>
-        <li>
-          <a href="#Responsive_Typography">
-            Responsive Typography
-          </a>
-        </li>
-        <li>
-          <a href="#The_Viewport_Meta_Tag">
-            The Viewport Meta Tag
-          </a>
-        </li>
-        <li>
-          <a href="#Summary">
-            Summary
-          </a>
-        </li>
-      </ul>
-      </nav>
-      <main id="main-doc">
-        <section class="main-section">
-          <header id="Responsive_Design">Responsive Design</header>
-          <p>The term responsive design was coined by Ethan Marcotte in 2010, 
-            and described the use of three techniques in combination.</p>
-          <ol>
-            <li>The first was the idea of fluid grids, something which was 
-              already being explored by Gillenwater, and can be read up on in 
-              Marcotte's article, 
-              <a href="https://alistapart.com/article/fluidgrids/" 
-                target="_blank">Fluid Grids
-              </a> (published in 2009 on A List Apart).</li>
-            <li>The second technique was the idea of <a href="http://unstoppablerobotninja.com/entry/fluid-images" target="_blank">fluid 
-              images</a>. Using a very simple technique of setting the <code>max-width</code> property to <code>100%</code>, images would 
-              scale down smaller if their containing column became narrower than the image's intrinsic size, but never grow larger. This 
-              enables an image to scale down to fit in a flexibly-sized column, rather than overflow it, but not grow larger and become 
-              pixellated if the column becomes wider than the image.</li>
-            <li>The third key component was the <a href="/en-US/docs/Web/CSS/Media_Queries" target="_blank">media query</a>. Media Queries 
-              enable the type of layout switch that Cameron Adams had previously explored using JavaScript, using only CSS. Rather than 
-              having one layout for all screen sizes, the layout could be changed. Sidebars could be repositioned for the smaller screen, 
-              or alternate navigation could be displayed.</li>
-          </ol>
-        
-          <p>It is important to understand that <strong>responsive web design isn't a separate technology</strong> — it is a term used to 
-            describe an approach to web design, or a set of best practices, used to create a layout that can <em>respond</em> to the device 
-            being used to view the content. In Marcotte's original exploration this meant flexible grids (using floats) and media queries, 
-            however in the almost 10 years since that article was written, working responsively has become the default. Modern CSS layout 
-            methods are inherently responsive, and we have new things built into the web platform to make designing responsive sites 
-            easier.</p>
-        
-          <p>The rest of this article will point you to the various web platform features you might want to use when creating a 
-            responsive site.</p>
+<body>
+  <nav id="navbar">
+    <header>CSS Responsive Design</header>
+    <ul>
+      <li>
+        <a href="#Responsive_Design">
+          Responsive Design
+        </a>
+      </li>
+      <li>
+        <a href="#Media_Queries">
+          Media Queries
+        </a>
+      </li>
+      <li>
+        <a href="#Flexible_Grids">
+          Flexible Grids
+        </a>
+      </li>
+      <li>
+        <a href="#Responsive_Images">
+          Responsive Images
+        </a>
+      </li>
+      <li>
+        <a href="#Responsive_Typography">
+          Responsive Typography
+        </a>
+      </li>
+      <li>
+        <a href="#The_Viewport_Meta_Tag">
+          The Viewport Meta Tag
+        </a>
+      </li>
+      <li>
+        <a href="#Summary">
+          Summary
+        </a>
+      </li>
+    </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section">
+        <header id="Responsive_Design">Responsive Design</header>
+        <p>
+          The term responsive design was coined by Ethan Marcotte in 2010, 
+          and described the use of three techniques in combination.
+        </p>
+        <ol>
+          <li>
+            The first was the idea of fluid grids, something which was 
+            already being explored by Gillenwater, and can be read up on in 
+            Marcotte's article, 
+            <a href="https://alistapart.com/article/fluidgrids/" 
+              target="_blank">
+              Fluid Grids
+            </a> (published in 2009 on A List Apart).
+          </li>
+          <li>
+            The second technique was the idea of 
+            <a href="http://unstoppablerobotninja.com/entry/fluid-images" 
+              target="_blank">
+              fluid images
+            </a>. Using a very simple technique of setting the 
+            <code>
+              max-width
+            </code> property to 
+            <code>
+              100%
+            </code>, images would scale down smaller if their containing 
+            column became narrower than the image's intrinsic size, but 
+            never grow larger. This enables an image to scale down to fit 
+            in a flexibly-sized column, rather than overflow it, but not 
+            grow larger and become pixellated if the column becomes wider 
+            than the image.
+          </li>
+          <li>
+            The third key component was the 
+            <a href="/en-US/docs/Web/CSS/Media_Queries" target="_blank">
+              media query
+            </a>. 
+            Media Queries enable the type of layout switch that Cameron 
+            Adams had previously explored using JavaScript, using only CSS. 
+            Rather than having one layout for all screen sizes, the layout 
+            could be changed. Sidebars could be repositioned for the smaller 
+            screen, or alternate navigation could be displayed.
+          </li>
+        </ol>
+        <p>
+          It is important to understand that <strong>responsive web design 
+          isn't a separate technology</strong> — it is a term used to 
+          describe an approach to web design, or a set of best practices, 
+          used to create a layout that can <em>respond</em> to the device 
+          being used to view the content. In Marcotte's original exploration 
+          this meant flexible grids (using floats) and media queries, 
+          however in the almost 10 years since that article was written, 
+          working responsively has become the default. Modern CSS layout 
+          methods are inherently responsive, and we have new things built 
+          into the web platform to make designing responsive sites easier.
+        </p>
+        <p>
+          The rest of this article will point you to the various web 
+          platform features you might want to use when creating a 
+          responsive site.
+        </p>
       </section>
       <section class="main-section">
         <header id="Media_Queries">Media Queries</header>
-          <p>Responsive design was only able to emerge due to the media query. The Media Queries Level 3 specification became a Candidate 
-            Recommendation in 2009, meaning that it was deemed ready for implementation in browsers. Media Queries allow us to run a series 
-            of tests (e.g. whether the user's screen is greater than a certain width, or a certain resolution) and apply CSS selectively to 
-            style the page appropriately for the user's needs.</p>
-
-        <p>For example, the following media query tests to see if the current web page is being displayed as screen media (therefore not a printed document) and the viewport is at least 800 pixels wide. The CSS for the <code>.container</code> selector will only be applied if these two things are true.</p>
-        
-        <pre class="brush: css"><code>@media screen and (min-width: 800px) { 
-          .container { 
-            margin: 1em 2em; 
-          } 
-        } </code>
-        </pre>
-        
-        <p>You can add multiple media queries within a stylesheet, tweaking your whole layout or parts of it to best suit the various screen sizes. The points at which a media query is introduced, and the layout changed, are known as <em>breakpoints</em>.</p>
-        
-        <p>A common approach when using Media Queries is to create a simple single-column layout for narrow-screen devices (e.g mobile phones), then check for larger screens and implement a multiple column layout when you know that you have enough screen width to handle it. This is often described as <strong>mobile first</strong> design.</p>
-        
-        <p>Find out more in the MDN documentation for <a href="/en-US/docs/Web/CSS/Media_Queries">Media Queries</a>.</p>
-        
+        <p>
+          Responsive design was only able to emerge due to the media query. 
+          The Media Queries Level 3 specification became a Candidate 
+          Recommendation in 2009, meaning that it was deemed ready for 
+          implementation in browsers. Media Queries allow us to run a series 
+          of tests (e.g. whether the user's screen is greater than a certain 
+          width, or a certain resolution) and apply CSS selectively to 
+          style the page appropriately for the user's needs.
+        </p>
+        <p>
+          For example, the following media query tests to see if the current 
+          web page is being displayed as screen media (therefore not a 
+          printed document) and the viewport is at least 800 pixels wide. 
+          The CSS for the 
+          <code>
+            .container
+          </code> 
+            selector will only be applied if these two things are true.
+        </p>
+        <p>
+          <code>
+            @media screen and (min-width: 800px) { <br>
+              .container { <br>
+                margin: 1em 2em; <br>
+              } <br>
+            }
+          </code>
+        </p>
+        <p>
+          You can add multiple media queries within a stylesheet, tweaking 
+          your whole layout or parts of it to best suit the various screen 
+          sizes. The points at which a media query is introduced, and the 
+          layout changed, are known as <em>breakpoints</em>.
+        </p>
+        <p>
+          A common approach when using Media Queries is to create a simple 
+          single-column layout for narrow-screen devices (e.g mobile phones), 
+          then check for larger screens and implement a multiple column layout 
+          when you know that you have enough screen width to handle it. This 
+          is often described as <strong>mobile first</strong> design.
+        </p>
+        <p>
+          Find out more in the MDN documentation for 
+          <a href="/en-US/docs/Web/CSS/Media_Queries">Media Queries</a>.
+        </p>
       </section>
       <section class="main-section">
         <header id="Flexible_Grids">Flexible Grids</header>
+        
       </section>
       <section class="main-section">
         <header id="Responsive_Images">Responsive Images</header>
