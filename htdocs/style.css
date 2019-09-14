@@ -94,10 +94,11 @@ img {
     text-justify: auto;
 }
 
-@media only screen and (max-width: 815px) {
+@media only screen and (max-width: 1015px) {
     /* For mobile phones: */
     #navbar ul {
         height: 450px;
+        width: 
     }
   
     #navbar {
