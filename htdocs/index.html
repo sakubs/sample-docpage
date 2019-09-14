@@ -62,12 +62,12 @@
               target="_blank">
               fluid images
             </a>. Using a very simple technique of setting the 
-            <code>
+            <pre><code>
               max-width
-            </code> property to 
-            <code>
+            </code></pre> property to 
+            <pre><code>
               100%
-            </code>, images would scale down smaller if their containing 
+            </code></pre>, images would scale down smaller if their containing 
             column became narrower than the image's intrinsic size, but 
             never grow larger. This enables an image to scale down to fit 
             in a flexibly-sized column, rather than overflow it, but not 
@@ -123,13 +123,13 @@
           applied if these two things are true.
         </p>
         <p>
-            <pre class="brush: css"><code>
+          <code>
             @media screen and (min-width: 800px) {
               .container {
                 margin: 1em 2em;
               }
             }
-          </code></pre>
+          </code>
         </p>
         <p>
           You can add multiple media queries within a stylesheet, tweaking 
@@ -184,10 +184,9 @@
           value we can use in our CSS, after moving the decimal point two 
           places to the right.
         </p>
-        <pre class="brush: css"><code>.col { 
+        <code>.col { 
           width: 6.25%; /* 60 / 960 = 0.0625 */ 
         }</code>
-        </pre>
         <p>
           This approach will be found in many places across the web today, and 
           it is documented here in the layout section of our 
@@ -241,11 +240,11 @@
           needed, and scale it down. This is still an approach used today, 
           and in most stylesheets you will find the following CSS somewhere:
         </p>
-        <pre class="brush: css"><code>
+          <code>
           img {
             max-width: 100%:
-          } 
-        </code></pre>
+          }
+          </code>
         <p>
           There are obvious downsides to this approach. The image might be 
           displayed a lot smaller than its intrinsic size, which is a waste of 
@@ -301,7 +300,7 @@
           then use media queries to overwrite it with the larger size if we 
           know that the user has a screen size of at least 1200px.
         </p>
-        <pre class="brush: css"><code>
+          <code>
           html { 
             font-size: 1em; 
           }
@@ -315,7 +314,7 @@
               font-size: 4rem; 
             }
           } 
-        </code></pre>
+          </code>
         <p>
           We have edited our responsive grid example above to also include 
           responsive type using the method outlined. You can see how the 
@@ -367,11 +366,11 @@
           size using <code>vw</code>, it will always relate to the size of the 
           viewport.
         </p>
-        <pre class="brush: css"><code> 
+          <code> 
           h1 {
             font-size: 6vw;
           }
-        </code></pre>
+          </code>
         <p>
           The problem with doing the above is that the user loses the ability 
           to zoom any text set using the vw unit, as that text is always 
@@ -386,11 +385,11 @@
           zoomable. Essentially, the <code>vw</code> unit adds on top of that 
           zoomed value:
         </p>
-        <pre class="brush: css"><code>
+        <code>
           h1 {
             font-size: calc(1.5rem + 3vw);
           }
-        </code></pre>
+        </code>
         <p>
           This means that we only need to specify the font size for the 
           heading once, rather than set it up for mobile and redefine it in 
@@ -418,9 +417,9 @@
           &lt;style> or &lt;title>."><code>&lt;meta&gt;</code></a> tag in the 
           <code>&lt;head&gt;</code> of the document.
         </p>
-        <pre class="brush: html"><code>
+        <code>
           &lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;
-        </code></pre>
+        </code>
         <p>
           This meta tag tells mobile browsers that they should set the width 
           of the viewport to the device width, and scale the document to 100% 
