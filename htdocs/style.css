@@ -8,6 +8,10 @@ body {
     min-width: 290px;
 }
 
+code {
+    background: #def2f1;
+}
+
 #navbar {
     background-color: #2b7a78;
     font-size: 1.8rem;
@@ -42,15 +46,15 @@ body {
     margin-left: 310px;
     padding: 20px;
     margin-bottom: 110px;
+    overflow-wrap: normal;
     justify-content: flex-start;
     text-justify: auto;
 }
-  
-@media only screen and (max-width: 815px) {
+
+@media only screen and (max-width: 800px) {
 
     /* For mobile phones: */
     #navbar ul {
-      border: 1px solid;
       height: 207px;
     }
     #navbar {
@@ -62,13 +66,12 @@ body {
         max-height: 275px;
         border: none;
         z-index: 1;
-        border-bottom: 2px solid;
       }
     
       #main-doc {
         position: relative;
         margin-left: 0px;
-        margin-top: 270px;
+        
       }
 }
 
@@ -78,12 +81,13 @@ body {
     }
   
     code {
-      margin-left: -20px;
-      width: 100%;
-      padding: 15px;
-      padding-left: 10px;
-      padding-right: 45px;
-      min-width: 233px;
+        background: #def2f1;
+        margin-left: -20px;
+        width: 100%;
+        padding: 15px;
+        padding-left: 10px;
+        padding-right: 45px;
+        min-width: 233px;
     }
 }
 
