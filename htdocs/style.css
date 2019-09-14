@@ -27,6 +27,10 @@ body {
     cursor: pointer;
 }
 
+#navbar ul {
+    list-style: none;
+}
+
 #main-doc {
     background-color: #3aafa9;
     font-size: 1.8rem;
