@@ -1,5 +1,7 @@
-html {
+html, 
+body {
     background: #3aafa9;
+    min-width: 290px;
 }
 
 #navbar a {
@@ -21,8 +23,6 @@ html {
 
 #navbar {
     background-color: #2b7a78;
-    border-radius: 5px;
-
 }
 
 #main-doc {
@@ -32,6 +32,8 @@ html {
     margin-left: 310px;
     padding: 20px;
     margin-bottom: 110px;
+    justify-content: flex-start;
+    text-justify: auto;
 }
   
 @media only screen and (max-width: 815px) {
@@ -42,7 +44,6 @@ html {
       height: 207px;
     }
     #navbar {
-        background-color: white;
         position: absolute;
         top: 0;
         padding: 0;
