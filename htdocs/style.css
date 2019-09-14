@@ -27,6 +27,10 @@ body {
     cursor: pointer;
 }
 
+#navbar a:hover {
+    background: #3aafa9;
+}
+
 #navbar ul {
     list-style: none;
 }
