@@ -7,9 +7,27 @@ body {
     line-height: 1.5;
     min-width: 290px;
 }
+
+a {
+    color: #def2f1;
+}
+
+h1, header {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
 code {
     background: #def2f1;
     border-radius: 5px;
+    color: #666;
+    font-family: monospace;
+    font-size: 1.5rem;
+    padding: 1px;
     white-space: pre;
 }
 
@@ -17,15 +35,15 @@ pre {
     background: #def2f1;
     border-radius: 5px;
     border-left: 5px solid #2b7a78;
-    color: #666;
-    page-break-inside: avoid;
-    font-family: monospace;
-    font-size: 1.5rem;
-    line-height: 1.6;
-    max-width: 100%;
-    overflow: auto;
-    position: relative;
     display: block;
+    line-height: 1.6;
+    padding-left: 5px;
+    max-width: 50%;
+    overflow: auto;
+    page-break-inside: avoid;
+    position: relative;
+    tab-size: 2;
+    white-space: pre-wrap;
     word-wrap: break-word;
 }
 
@@ -58,6 +76,10 @@ img {
 
 #navbar ul {
     list-style: none;
+    height: 88%;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #main-doc {

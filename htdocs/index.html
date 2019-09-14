@@ -62,7 +62,7 @@
               target="_blank">
               fluid images
             </a>. Using a very simple technique of setting the 
-            <code> max-width </code> property to <code> 100% </code>, images 
+            <code>max-width</code> property to <code>100%</code>, images 
             would scale down smaller if their containing column became 
             narrower than the image's intrinsic size, but never grow larger. 
             This enables an image to scale down to fit in a flexibly-sized 
@@ -114,17 +114,15 @@
           For example, the following media query tests to see if the current 
           web page is being displayed as screen media (therefore not a 
           printed document) and the viewport is at least 800 pixels wide. 
-          The CSS for the <code>.container</code> selector will only be 
+          The CSS for the <code> .container </code> selector will only be 
           applied if these two things are true.
         </p>
-        <p>
-          <code>
-            @media screen and (min-width: 800px) {
-              .container {
-                margin: 1em 2em;
-              }
-            }
-          </code>
+        <p>  
+          <pre><code>@media screen and (min-width: 800px) {
+  .container {
+    margin: 1em 2em;
+  }
+}</code></pre>
         </p>
         <p>
           You can add multiple media queries within a stylesheet, tweaking 
@@ -179,9 +177,9 @@
           value we can use in our CSS, after moving the decimal point two 
           places to the right.
         </p>
-        <code>.col { 
-          width: 6.25%; /* 60 / 960 = 0.0625 */ 
-        }</code>
+        <pre><code>.col { 
+  width: 6.25%; /* 60 / 960 = 0.0625 */ 
+}</code></pre>
         <p>
           This approach will be found in many places across the web today, and 
           it is documented here in the layout section of our 
@@ -235,11 +233,9 @@
           needed, and scale it down. This is still an approach used today, 
           and in most stylesheets you will find the following CSS somewhere:
         </p>
-          <code>
-          img {
-            max-width: 100%:
-          }
-          </code>
+          <pre><code>img {
+  max-width: 100%:
+}</code></pre>
         <p>
           There are obvious downsides to this approach. The image might be 
           displayed a lot smaller than its intrinsic size, which is a waste of 
@@ -253,20 +249,14 @@
           understood at a small screen size. These things can't be achieved by 
           simply scaling down an image.
         </p>
-        <p>Responsive Images, using the 
-          <code><a href="/en-US/docs/Web/HTML/Element/picture">
-            &lt;picture&gt;</a>
-          </code> element and the 
-          <code>
-            <a href="/en-US/docs/Web/HTML/Element/img">
-              &lt;img&gt;
-            </a>
-          </code> <code>srcset</code> and <code>sizes</code> attributes solve 
-          both of these problems. You can provide multiple sizes along with 
-          "hints" (meta data that describes the screen size and resolution the 
-          image is best suited for), and the browser will choose the most 
-          appropriate image for each device, ensuring that a user will 
-          download an image size appropriate for the device they are using.
+        <p>Responsive Images, using the <code>&lt;picture&gt;</code> element 
+          and the <code>&lt;img&gt;</code> <code>srcset</code> and 
+          <code>sizes</code> attributes solve both of these problems. You can 
+          provide multiple sizes along with "hints" (meta data that describes 
+          the screen size and resolution the image is best suited for), and 
+          the browser will choose the most appropriate image for each device, 
+          ensuring that a user will download an image size appropriate for 
+          the device they are using.
         </p>
         <p>
           You can also <em>art direct</em> images used at different sizes, 
@@ -295,21 +285,19 @@
           then use media queries to overwrite it with the larger size if we 
           know that the user has a screen size of at least 1200px.
         </p>
-          <code>
-          html { 
-            font-size: 1em; 
-          }
-        
-          h1 { 
-            font-size: 2rem; 
-          } 
-        
-          @media (min-width: 1200px) { 
-            h1 {
-              font-size: 4rem; 
-            }
-          } 
-          </code>
+          <pre><code>html { 
+  font-size: 1em; 
+}
+
+h1 { 
+  font-size: 2rem; 
+} 
+
+@media (min-width: 1200px) { 
+  h1 {
+    font-size: 4rem; 
+  }
+}</code></pre>
         <p>
           We have edited our responsive grid example above to also include 
           responsive type using the method outlined. You can see how the 
@@ -361,11 +349,9 @@
           size using <code>vw</code>, it will always relate to the size of the 
           viewport.
         </p>
-          <code> 
-          h1 {
-            font-size: 6vw;
-          }
-          </code>
+          <pre><code>h1 {
+  font-size: 6vw;
+}</code></pre>
         <p>
           The problem with doing the above is that the user loses the ability 
           to zoom any text set using the vw unit, as that text is always 
@@ -373,18 +359,15 @@
           never set text using viewport units alone</strong>.
         </p>        
         <p>
-          There is a solution, and it involves using <code>
-          <a href="/en-US/docs/Web/CSS/calc">calc()</a></code>. If you add 
-          the <code>vw</code> unit to a value set using a fixed size such as 
-          <code>em</code>s or <code>rem</code>s then the text will still be 
-          zoomable. Essentially, the <code>vw</code> unit adds on top of that 
-          zoomed value:
+          There is a solution, and it involves using <code>calc()</code>. If 
+          you add the <code>vw</code> unit to a value set using a fixed size 
+          such as <code>em</code>s or <code>rem</code>s then the text will 
+          still be zoomable. Essentially, the <code>vw</code> unit adds on 
+          top of that zoomed value:
+        <pre><code>h1 {
+  font-size: calc(1.5rem + 3vw);
+}</code></pre>
         </p>
-        <code>
-          h1 {
-            font-size: calc(1.5rem + 3vw);
-          }
-        </code>
         <p>
           This means that we only need to specify the font size for the 
           heading once, rather than set it up for mobile and redefine it in 
@@ -412,9 +395,9 @@
           &lt;style> or &lt;title>."><code>&lt;meta&gt;</code></a> tag in the 
           <code>&lt;head&gt;</code> of the document.
         </p>
-        <code>
-          &lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;
-        </code>
+        <p>
+          <code>&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;</code>
+        </p>
         <p>
           This meta tag tells mobile browsers that they should set the width 
           of the viewport to the device width, and scale the document to 100% 
