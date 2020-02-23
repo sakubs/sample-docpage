@@ -36,6 +36,11 @@ code {
     white-space: pre;
 }
 
+.div-fig {
+    display: inline-block;
+        
+}
+
 h1, header {
     font-size: 3.5rem;
     font-weight: bold;
@@ -54,7 +59,7 @@ img {
     text-align: center;
 }
 
-.div-code-wrap {
+.div-code-wrap, .div-fig-wrap {
     display: block;
     text-align: center;
 }
