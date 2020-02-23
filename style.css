@@ -1,6 +1,16 @@
+/**
+Contents
+1. Main Elements
+2. Builtin Elements
+*/
+
+/*===============
+1. Main Elements
+================*/
+
 html, 
 body {
-    background: #3aafa9;
+    background: #2b7a78;
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -8,17 +18,12 @@ body {
     min-width: 290px;
 }
 
+/*===================
+2. Builtin Elements
+===================*/
+
 a {
-    color: #def2f1;
-}
-
-h1, header {
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-h2 {
-    font-size: 1.8rem;
+    color: #2b7a78;
 }
 
 code {
@@ -29,6 +34,24 @@ code {
     font-size: 1.5rem;
     padding: 1px;
     white-space: pre;
+}
+
+h1, header {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.doc-header {
+    margin: 2em 0em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+img {
+    border-radius: 5px;
 }
 
 pre {
@@ -45,10 +68,6 @@ pre {
     tab-size: 2;
     white-space: pre-wrap;
     word-wrap: break-word;
-}
-
-img {
-    border-radius: 5px;
 }
 
 #navbar {
@@ -82,8 +101,15 @@ img {
     overflow-x: hidden;
 }
 
+#navbar ul > li {
+    border: solid 2px #fff;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px;
+}
+
 #main-doc {
-    background-color: #3aafa9;
+    background-color: #fff;
     font-size: 1.8rem;
     position: absolute;
     margin-left: 310px;
@@ -92,13 +118,18 @@ img {
     overflow-wrap: normal;
     justify-content: flex-start;
     text-justify: auto;
+    border: 3px solid transparent;
+    border-radius: 5px;
+}
+
+.main-section {
+    margin: 10px;
 }
 
 @media only screen and (max-width: 1015px) {
     /* For mobile phones: */
     #navbar ul {
         height: 450px;
-        width: 
     }
   
     #navbar {
