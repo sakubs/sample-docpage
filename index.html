@@ -124,13 +124,13 @@
         The CSS for the <code> .container </code> selector will only be 
         applied if these two things are true.
       </p>
-      <p>  
-        <pre><code>@media screen and (min-width: 800px) {
-.container {
-  margin: 1em 2em;
-}
-}</code></pre>
-      </p>
+      <div class="div-code-wrap">
+        <div class="div-code">  
+          <code>@media screen and (min-width: 800px) {
+  .container {
+    margin: 1em 2em;
+  }}</code></div>
+      </div>
       <p>
         You can add multiple media queries within a stylesheet, tweaking 
         your whole layout or parts of it to best suit the various screen 
@@ -176,7 +176,9 @@
         Marcotte detailed a formula for taking a layout designed using pixels 
         and converting it into percentages.
       </p>
-      <pre><code>target / context = result</code></pre>
+      <div class="div-code-wrap">
+        <div class="div-code">  
+      <code>target / context = result</code></div></div></div>
       
       <p>
         For example if our target column size is 60 pixels, and the context 
@@ -184,9 +186,11 @@
         value we can use in our CSS, after moving the decimal point two 
         places to the right.
       </p>
-      <pre><code>.col { 
-width: 6.25%; /* 60 / 960 = 0.0625 */ 
-}</code></pre>
+      <div class="div-code-wrap">
+        <div class="div-code">  
+      <code>.col { 
+  width: 6.25%; /* 60 / 960 = 0.0625 */ 
+}</code></div></div>
       <p>
         This approach will be found in many places across the web today, and 
         it is documented here in the layout section of our 
@@ -240,9 +244,11 @@ width: 6.25%; /* 60 / 960 = 0.0625 */
         needed, and scale it down. This is still an approach used today, 
         and in most stylesheets you will find the following CSS somewhere:
       </p>
-        <pre><code>img {
-max-width: 100%:
-}</code></pre>
+      <div class="div-code-wrap">
+        <div class="div-code">  
+      <code>img {
+  max-width: 100%:
+}</code></div></div>
       <p>
         There are obvious downsides to this approach. The image might be 
         displayed a lot smaller than its intrinsic size, which is a waste of 
@@ -292,19 +298,21 @@ max-width: 100%:
         then use media queries to overwrite it with the larger size if we 
         know that the user has a screen size of at least 1200px.
       </p>
-        <pre><code>html { 
-font-size: 1em; 
+      <div class="div-code-wrap">
+        <div class="div-code">  
+      <code>html { 
+  font-size: 1em; 
 }
 
 h1 { 
-font-size: 2rem; 
+  font-size: 2rem; 
 } 
 
 @media (min-width: 1200px) { 
-h1 {
-  font-size: 4rem; 
-}
-}</code></pre>
+  h1 {
+    font-size: 4rem; 
+  }
+}</code></div></div>
       <p>
         We have edited our responsive grid example above to also include 
         responsive type using the method outlined. You can see how the 
@@ -356,9 +364,11 @@ h1 {
         size using <code>vw</code>, it will always relate to the size of the 
         viewport.
       </p>
-        <pre><code>h1 {
-font-size: 6vw;
-}</code></pre>
+      <div class="div-code-wrap">
+        <div class="div-code">  
+      <code>h1 {
+  font-size: 6vw;
+}</code></div></div>
       <p>
         The problem with doing the above is that the user loses the ability 
         to zoom any text set using the vw unit, as that text is always 
@@ -371,9 +381,11 @@ font-size: 6vw;
         such as <code>em</code>s or <code>rem</code>s then the text will 
         still be zoomable. Essentially, the <code>vw</code> unit adds on 
         top of that zoomed value:
-      <pre><code>h1 {
+        <div class="div-code-wrap">
+          <div class="div-code">  
+        <code>h1 {
 font-size: calc(1.5rem + 3vw);
-}</code></pre>
+}</code></div></div>
       </p>
       <p>
         This means that we only need to specify the font size for the 
